@@ -2,8 +2,6 @@
 
 course material for tutorial
 
-Tutorial 2: Find a Product Tutorial as an introduction to Protègè
-
 ## Start-Up for Tutorials 4 and up with juypter notebooks
 
 Please install docker and docker-compose to your system. Here is the link for windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows/ <br>
