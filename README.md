@@ -39,7 +39,7 @@ If you now switch to the launcher start page, in addition to the python kernel y
 Now let's start with the Tutorials!
 
 You can either
-- clone this repository using git (e.g. git bash): `git clone https://github.com/michaelakuempelActionableKnowledgeRepresentation.git`
+- clone this repository using git (e.g. git bash): `git clone https://github.com/michaelakuempel/ActionableKnowledgeRepresentation.git`
 or
 - download the tutorial jupyter notebook files directly
 
