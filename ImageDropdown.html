@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dropdown Menu with Pictures</title>
+</head>
+<body>
+
+<select id="dropdown" onchange="changePicture()">
+  <!-- Options will be added dynamically here -->
+  <option value="default">Select an image</option>
+</select>
+
+<img id="picture" src="" alt="Selected Picture">
+
+<script>
+    // A list of strings that will be our options 
+    var stringList = ["Picture 1", "Picture 2", "Picture 3"];
+
+    // A list of our picture names/ paths to our pictures 
+    var pictureURLs = ["./images/logo1.png", "./images/Logo.png", "./images/LogoAI.png"];
+
+    // Retrieve the dropdown select element by its ID 
+    var dropdown = document.getElementById("dropdown");
+
+    // Retrieve the img element by its ID 
+    var pictureElement = document.getElementById("picture");
+
+    // Loop through each element in the list of strings.
+    // We use each element (pictureName) and its index. 
+    stringList.forEach(function(pictureName, index) {
+      // Create a new option element
+      var option = document.createElement("option");
+
+      // Set the text of the option to the current string (e.g. 'Picture 1')
+      option.text = pictureName;
+
+      // Set the value of the option to the corresponding picture URL
+      // We take the same index as for our pictureName (index of 'Picture 1' == 0; element at index 0 in pictureURLs == './images/logo1.png')
+      option.value = pictureURLs[index];
+
+      // Add the option to the dropdown menu
+      dropdown.appendChild(option);
+});
+
+    // Function to change the displayed picture based on the selected option
+    function changePicture() {
+      // Get the selected value from the dropdown
+      var selectedValue = dropdown.value;
+
+      // Set the src attribute of the picture element to the selected value (picture URL)
+      pictureElement.src = selectedValue;
+
+      // We check if the default value is not the selectedValue
+      if (selectedValue !== 'default') {
+                // We set the src of the img element to be the value of our selection (image url)
+                pictureElement.src = selectedValue;
+            } else {
+                // If the default option is selected, we set the src to an empty string
+                pictureElement.src = '';
+            }
+}
+</script>
+
+</body>
+</html>

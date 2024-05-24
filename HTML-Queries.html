@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Tutorial</title>
+</head>
+<body>
+    <!-- Dropdown menu with the queried persons names as options -->
+    <div>
+          <!-- When selecting a perosn, the 'displayBirthdate' fuction is called -->
+        <select id="dropdown" onchange="displayBirthdate()">
+            <!-- Default Option -->
+            <option value="default">Select a Person</option>
+        </select>
+    </div>
+
+    <!-- Element that displays a paragraph with the birthdate of a selected person -->
+    <div>
+        <p id="birthdate"><!-- Bithdate of the selected person will be added dynamically here --></p>
+    </div>
+
+    <script>
+        // Remove certain symbols to clean up the name of the person and make sure everything works.
+        // If you don`t do this, the attribute name may be invalid and no entry in the menu is created.
+        function cleanName(name) {
+            return name.replace(/[^a-zA-Z0-9_-]/g, '_');
+        }
+
+        // This function will handle our query response. We will create a list based on our query results and
+        // then create the options for our dropdown menu based on that list.
+        function handleQueryResults(query) {
+            
+            // We save our qurie results in an array. Specifically, we create objects that contain our queried bindings person and birthdate.
+            // The array looks somethings like this: 
+            // [{person: {type: 'uri', value: 'http://dbpedia.org/resource/CaMia_Hopson'}, birtDate: {type: 'typed-literal', datatype: 'http://www.w3.org/2001/XMLSchema#date', value: '1907-12-25'}},...]
+            const persons = query.results.bindings;
+
+            console.log("Results: ", persons);
+
+            // Get the dropdown menu by its ID
+            const dropdown = document.getElementById('dropdown');
+
+            // We loop through our array of persons. 
+            persons.forEach(x => {
+                //For every person x (we call it x to avoid confusion with the person tags), we access the 'person' tag 
+                // and then get the content of the 'value' tag. The content is a URI. With the split function we create a List of all elements sereated by '/'.
+                // Lastly we use pop to remove and return the last element of that list which is th name of the person and clean the name up.
+                const person = cleanName(x.person.value.split('/').pop());
+
+                // Create a new option element
+                const option = document.createElement('option');
+
+                // Set the value of the option to the person's name
+                option.value = person;
+
+                // Set the text content of the option to the person's name
+                option.textContent = person;
+
+                // Append the option to the dropdown menu
+                dropdown.appendChild(option);
+
+                // We create a dataset for the menu that associates the persons name with the content of 'value' of 'birthDate'
+                dropdown.dataset[person] = x.birthDate.value;
+            });
+        }
+
+        // Function to display the birthdate of the selected person
+        function displayBirthdate() {
+            // Get the dropdown menu by its ID
+            const dropdown = document.getElementById('dropdown');
+
+            // Get the value of the selected option in the dropdown menu 
+            const selectedValue = dropdown.options[dropdown.selectedIndex].value;
+
+            // Get the paragraph where the birthday will by displayed by its ID
+            const birthdayPhrase = document.getElementById('birthdate');
+
+            // We check if the default value is not the selectedValue
+            if (selectedValue !== 'default') {
+                
+                // We clean the selected value (name) 
+                const cleanedName = cleanName(selectedValue);
+                
+                // We use the cleaned value as key to access the associated value from the dropdown database
+                const birthdate = dropdown.dataset[cleanedName];
+                
+                // We set the content of the paragraph element to be 'Birthdate: ' followed by the value of 'birthdate'.
+                birthdayPhrase.textContent = 'Birthdate: ' + birthdate;
+            } else {
+                // If the default option is selected, we display an empty string (so nothing)
+                birthdayPhrase.textContent = '';
+            }
+        }
+
+        // The Query accesses the dbpedia database and looks for elements of the 'Person' class as well as their birthdate.
+        const endpointUrl = 'http://dbpedia.org/sparql';
+        const sparqlQuery = `
+            PREFIX dbo: <http://dbpedia.org/ontology/>
+            SELECT ?person ?birthDate
+            WHERE {
+                ?person rdf:type dbo:Person .
+                ?person dbo:birthDate ?birthDate .
+            }
+            LIMIT 10
+        `;
+
+        //When we want to request to access data from one website (like 'dbpedia.org') from our domain, we need to
+        // 'cross domain boundaries' which is most times prohibited. The one item that bypasses this limitation is <script> tags 
+        // but the results are often not usable.  
+        
+        // Construct the URL for the JSONP request
+        const queryUrl = endpointUrl + '?query=' + encodeURIComponent(sparqlQuery) + '&format=json';
+        // Create a script element for the JSONP request
+        const script = document.createElement('script');
+        // Set the source URL for the script element
+        script.src = queryUrl + '&callback=handleQueryResults';
+        // Append the script element to the document body to initiate the JSONP request
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>
