@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://ProductTaxonomyFromLidl.owl"
+         xmlns="http://ProductTaxonomyFromLidl.owl#">
+
+<owl:Ontology rdf:about="http://ProductTaxonomyFromLidl.owl"/>
+
+<owl:Class rdf:about="#Product">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FruitAndVeg">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Fruit &amp; Veg       </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Meat-Free">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Meat-Free      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MeatAndPoultry">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Meat &amp; Poultry      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FishAndSeafood">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Fish &amp; Seafood      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Bakery">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Bakery      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Chilled">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chilled      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenFood">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Frozen Food      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FoodCupboard">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Food Cupboard      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Wines">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BeerAndCider">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Beer &amp; Cider      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Spirits">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Spirits      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CleaningAndHousehold">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:subClassOf rdf:resource="#HealthAndBeauty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Cleaning &amp; Household      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HealthAndBeauty">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Health &amp; Beauty      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Baby">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:subClassOf rdf:resource="#HealthAndBeauty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Baby      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pet">
+  <rdfs:subClassOf rdf:resource="#Product"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Pet      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ClickheretobrowsethelatestPickoftheWeekoffers.">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Click here to browse the latest Pick of the Week offers.</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BritishApples">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        British Apples      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RedTractor">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Red Tractor      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BigOnFreshBritishCarrots">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Big On Fresh British Carrots      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RainforestAlliance">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Rainforest Alliance      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fairtrade">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Fairtrade      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LEAFCertified">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        LEAF Certified      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ourpledgeformoreveg">
+  <rdfs:subClassOf rdf:resource="#FruitAndVeg"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Our pledge for more veg      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Meat-FreeProducts">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Meat-Free Products      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Meat-FreeRecipeCollection">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Meat-Free Recipe Collection      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#LidlChangesForTheBetter">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Lidl Changes For The Better      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HighFibreBreakfastSmoothieBowl">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        High Fibre Breakfast Smoothie Bowl      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PunchyBlackBeanSmashBurgers">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:subClassOf rdf:resource="#Bakery"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Punchy Black Bean Smash Burgers      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BBQGlazedCornOnTheCob">
+  <rdfs:subClassOf rdf:resource="#Meat-Free"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        BBQ Glazed Corn On The Cob      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Beef">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Beef      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Pork,BaconAndSausages">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Pork, Bacon &amp; Sausages      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChickenAndTurkey">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chicken &amp; Turkey      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Lamb">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Lamb      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BackingBritishFarming">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Backing British Farming      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#WelfareWindows">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Welfare Windows      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RSPCA">
+  <rdfs:subClassOf rdf:resource="#MeatAndPoultry"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        RSPCA      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SustainableSeafood">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustainable Seafood</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MSCcertified">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        MSC certified      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PreventedOceanPlastic">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">         Prevented Ocean Plastic      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SeafoodFideuà">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Seafood Fideuà      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BarbecueFishQuesadillaPockets">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Barbecue Fish Quesadilla Pockets      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SaltySeaDogs">
+  <rdfs:subClassOf rdf:resource="#FishAndSeafood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Salty Sea Dogs      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CroissantBreadWithPearSauce">
+  <rdfs:subClassOf rdf:resource="#Bakery"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Croissant Bread With Pear Sauce      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CheesyPaniniCroutons">
+  <rdfs:subClassOf rdf:resource="#Bakery"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Cheesy Panini Croutons      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Eggs,CheeseAndDairy">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Eggs, Cheese &amp; Dairy      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Delicatessen">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Delicatessen      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChilledPizzasAndPasta">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chilled Pizzas &amp; Pasta      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChilledReadyMeals">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chilled Ready Meals      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChilledDessert">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chilled Dessert      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChilledJuicesAndSmoothies">
+  <rdfs:subClassOf rdf:resource="#Chilled"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chilled Juices &amp; Smoothies      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenFruitAndVeg">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Frozen Fruit &amp; Veg      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenFishAndSeafood">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Frozen Fish &amp; Seafood      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FrozenReadyMealsAndPizzas">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Frozen Ready Meals &amp; Pizzas      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#IceCreamAndFrozenDesserts">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Ice Cream &amp; Frozen Desserts      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Freshasparagusandfetabake">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Fresh asparagus and feta bake      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Zingylemonchickentraybake">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Zingy lemon chicken traybake      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Spicypeapotatocakes">
+  <rdfs:subClassOf rdf:resource="#FrozenFood"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Spicy pea potato cakes      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Jams,HoneyAndSpreads">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Jams, Honey &amp; Spreads      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Rice,PastaAndNoodles">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Rice, Pasta &amp; Noodles      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TeaAndCoffee">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Tea &amp; Coffee      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Cereals,MuesliAndOats">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Cereals, Muesli &amp; Oats      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#HomeBaking">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Home Baking      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#TinsAndJars">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Tins &amp; Jars      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CondimentsAndSpices">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Condiments &amp; Spices      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BiscuitsAndCrackers">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Biscuits &amp; Crackers      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Crisps,NutsAndPopcorn">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Crisps, Nuts &amp; Popcorn      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ChocolatesAndSweets">
+  <rdfs:subClassOf rdf:resource="#FoodCupboard"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Chocolates &amp; Sweets      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Awinerangetoamaze">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A wine range to amaze</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#WhiteWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        White Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RoséWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Rosé Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RedWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Red Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SparklingWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Sparkling Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#IWSCBronzeandSilver2022">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IWSC Bronze and Silver 2022</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DWWABronzeandSilver2022">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DWWA Bronze and Silver 2022</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DrinksRetailingAwardsFinalist2023">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drinks Retailing Awards Finalist 2023</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ViewourDeluxeWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> View our Deluxe Wines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BrowseAllOurDeluxeWines">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:subClassOf rdf:resource="#BeerAndCider"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Browse All Our Deluxe Wines      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#OurBeerAndCider">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Our Beer &amp; Cider      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#OurSpiritsCollection">
+  <rdfs:subClassOf rdf:resource="#Wines"/>
+  <rdfs:subClassOf rdf:resource="#BeerAndCider"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Our Spirits Collection      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#DeluxeDeli">
+  <rdfs:subClassOf rdf:resource="#BeerAndCider"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Deluxe Deli      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Retsinamojito">
+  <rdfs:subClassOf rdf:resource="#Spirits"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Retsina mojito      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Rhubarbcobblercocktail">
+  <rdfs:subClassOf rdf:resource="#Spirits"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Rhubarb cobbler cocktail      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Strawberryandbasilmule">
+  <rdfs:subClassOf rdf:resource="#Spirits"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Strawberry and basil mule      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FoodOffers">
+  <rdfs:subClassOf rdf:resource="#HealthAndBeauty"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Food Offers      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Nappies">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Nappies      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BabyFood">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Baby Food      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#BabyToiletries">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Baby Toiletries      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#AwardWinning">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Award Winning</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#SmokyCheeseAndSpinachFrittatas">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Smoky Cheese &amp; Spinach Frittatas      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#FruityBlueberryPancakes">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Fruity Blueberry Pancakes      </rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#ZingyAndHerbyFishFingers">
+  <rdfs:subClassOf rdf:resource="#Baby"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">        Zingy &amp; Herby Fish Fingers      </rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>
