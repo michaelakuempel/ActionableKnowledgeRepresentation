@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://TypeTaxonomyFromBulbagarden.owl"
+         xmlns="http://TypeTaxonomyFromBulbagarden.owl#">
+
+<owl:Ontology rdf:about="http://TypeTaxonomyFromBulbagarden.owl"/>
+
+<owl:Class rdf:about="#Types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Normal">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fire">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fire</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fighting">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fighting</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Water">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Flying">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flying</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Grass">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grass</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Poison">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poison</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Electric">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electric</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ground">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Psychic">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychic</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Rock">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ice">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ice</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Bug">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bug</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Dragon">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragon</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Ghost">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghost</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Dark">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Steel">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Fairy">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fairy</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Stellar">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stellar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#???">
+  <rdfs:subClassOf rdf:resource="#Types"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">???</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>
